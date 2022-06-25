@@ -1,0 +1,32 @@
+#SOHUCS{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    background: white;
+    border-radius: 16px;
+}
+.reset-g,.module-mobile-cmt-header,.mobile-header-head{
+    border-radius: 16px;
+}
+#SOHUCS > div{
+    background: none !important;
+}
+.module-cmt-footer{
+    display: none;
+}
+.danmu-wrap{
+    background: rgba(255,255,255,.8) !important;
+    color: black !important;
+    z-index: 9999 !important;
+    left: 0 !important;
+    right: auto !important;
+}
+.danmu-wrap > *{
+    color: black !important;
+}
+
+@media only screen and (min-width: 993px ) {
+    #SOHUCS{
+        padding: 16px !important;
+    }
+}
