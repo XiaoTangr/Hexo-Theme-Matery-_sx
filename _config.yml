@@ -16,12 +16,19 @@ menu:
   About:
     url: /about
     icon: fas fa-user-circle
+  cast:
+    url: /cast
+    icon: fa-solid fa-bell
   Contact:
     url: /contact
     icon: fas fa-comments
   Friends:
     url: /friends
     icon: fa-solid fa-link
+  #Travelling:
+    #url: https://travellings.link
+    #icon: fa-solid fa-train-subway
+
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list
@@ -144,8 +151,8 @@ recommend:
 
 # Configure website favicon and LOGO
 # 配置网站favicon和网站LOGO
-favicon: /assets/images/favicon32.png
-logo: /assets/images/header.png
+favicon: /assets/images/favicon32.webp
+logo: /assets/images/header.webp
 
 # The configuration of the second button in the home banner,
 # including the display name of the button, the font awesome icon, and the hyperlink to the button.
@@ -168,6 +175,7 @@ socialLink:
   weibo: # https://weibo.com/xxx
   zhihu: # https://www.zhihu.com/xxx
   rss: true # true、false
+  Travelling: false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -190,8 +198,8 @@ code:
 reward:
   enable: true
   title: '谢谢你请我吃糖果.'
-  wechat: /assets/images/wechatpay.png
-  alipay: /assets/images/alipay.png
+  wechat: /assets/images/wechatpay.webp
+  alipay: /assets/images/alipay.webp
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
@@ -220,7 +228,7 @@ postInfo:
   update: true # 更新日期
   wordCount: true # 文章字数统计
   totalCount: true # 站点总文章字数
-  min2read: false # 文章阅读时长
+  min2read: true # 文章阅读时长
   readCount: true # 文章阅读次数
 
 # Whether to activate the 'love' effect of clicking on the page.
@@ -254,56 +262,39 @@ snowdown:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /assets/images/favicon32.png
-  career: Software Engineer
-  introduction: 万丈高楼拔地起 ~ ~ ~
+  avatar: /assets/images/header.webp
+  career: 什么都不会的我
+  introduction: 书籍是人类进步的阶梯。
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: false
+  enable: true
   data:
-    hexo-theme-matery:
+    CDN:
       icon: fas fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: http://github.com/blinkfox/hexo-theme-matery
-      desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    Fenix:
-        icon: fas fa-database
-        iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
-        desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
-    typora-vue-theme:
-        icon: fas fa-file-alt
-        iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: This is a typora theme inspired by Vue document style.
+      url: http://github.com/shixinboy/cdn
+      desc: This is a cdn made by me.
+
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 mySkills:
-  enable: false
+  enable: true
   data:
-    Java:
-      background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
-      percent: 85%
     JavaScript:
       background: 'linear-gradient(to right, #9900FF 0%, #CC66FF 100%)'
-      percent: 80%
+      percent: 13%
     HTML5:
       background: 'linear-gradient(to right, #2196F3 0%, #42A5F5 100%)'
       percent: 80%
     CSS:
       background: 'linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)'
-      percent: 70%
-    SQL:
-      background: 'linear-gradient(to right, #4CAF50 0%, #81C784 100%)'
-      percent: 90%
-    程序设计:
-      background: 'linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)'
-      percent: 75%
+      percent: 35%
+
 
 # config gallery of my photos in about page.
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
@@ -369,7 +360,7 @@ livere:
 # 介绍: https://cloud.tencent.com/document/product/1110/36841
 # 管理验证码: https://console.cloud.tencent.com/captcha/graphical
 tcaptcha:
-  enable: true
+  enable: false
   appid: xxxxxxxxxx # 你的appid
 
 # The configuration of the Valine comment module is not activated by default.
@@ -405,23 +396,33 @@ minivaline:
 # Waline 评论模块的配置，默认为不激活，如要使用，就请激活该配置项
 # See: https://waline.js.org/
 waline:
-  enable: false
+  enable: true
   # Waline 服务端部署参考 https://waline.js.org/guide/server/intro.html 客户端和服务端版本需一致
   # 下面是一个例子，请替换成自己的服务端
-  serverURL: https://waline.your-domain.com
+  serverURL: https://sxcomments.vercel.app
   avatar: 'mp' # Gravatar style : ''/mp/identicon/monsterid/wavatar/retro/hide
+  mailT: 填个邮箱吧
+  URLT: 选填
+  commT: '欢迎发表看法，斧正错误，指正缺点... ...' 
+
+Discuss:
+  enable: false
+  serverURLs: https://pinglun-7gdpy97a5f7d6615-1253092305.ap-shanghai.app.tcloudbase.com/pl
+  color: 'rgba(255,255,255,1)'
+  path: abbrlink
+  ph: 写写
 
 changyan:
-  enable: true
+  enable: false
   sourceId: abbrlink    # abbrlink / id
-  appId: cyw8x2ERK
+  appid: cyw8x2ERK
   conf: prod_28069d4708077509b07e61dba22bb1c6
 
 
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: true
+  enable: false
   url: https://github.com/shixinboy/
   title: Fork Me On Github!
 
@@ -505,7 +506,7 @@ libs:
     star: /libs/others/star.js
     snow: /libs/others/snow.js
     tcaptcha: /libs/others/TencentCaptcha.js
-    busuanzi: /libs/others/busuanzi.pure.mini.js
+    busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js # /libs/others/busuanzi.pure.mini.js
     aplayer: /libs/aplayer/APlayer.min.js
     meting: /libs/aplayer/Meting.min.js
     dplayer: /libs/dplayer/DPlayer.min.js
@@ -581,7 +582,7 @@ featureImages:
 # pay（付费转载 pay for reprinting）
 reprint:
   enable: true # whether enable reprint section 是否启用“转载规则限定模块”
-  default: cc_by
+  default: cc_by_nc_sa
 
 # DaoVoice online contact
 daovoice:
@@ -617,7 +618,7 @@ ribbon:
 
 # 背景动态彩带.
 ribbon_dynamic:
-  enable: false
+  enable: true
 
 # sharejs文章分享模块.
 # 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
@@ -741,7 +742,7 @@ mermaid: ## mermaid url https://github.com/knsv/mermaid
 footer:
   copy:
     enable: true  # 是否启用自定义版权信息。
-    text: Copyright © 1998 - 2010 思卿长安归. All Rights Reserved.  #使用自定义版权信息，例如：Copyright © 1998 - 2010 Tencent. All Rights Reserved
+    text: Copyright © 2020 - 2023 思卿长安归. All Rights Reserved.  #使用自定义版权信息，例如：Copyright © 1998 - 2010 Tencent. All Rights Reserved
   icp:
     enable: false
     url: https://www.baidu.com # 备案链接
@@ -750,3 +751,31 @@ footer:
     # URL为查询链接
     # text为显示文本，标准格式为：(省简写)ICP备+主体序列号（8位数字）-网站序列号,如：(京)ICP备12345678-11
   powered: false # 是否显示"| Powered by Hexo | Theme Matery"字样
+
+# 滚动公告
+cast:
+  enable: true # 是否启用公告
+  icon: # 图标设置
+    enable: true #是否启用图标
+    class: # fa图标class，留空为fa-solid fa-bell
+    color: # 图标颜色，支持css颜色格式，留空为白色。
+  date: 2022年7月11日 # 留空不显示
+  text: 修改本站大部分图片资源由png转为webp，提高加载速度。
+  url: './../cast/'
+
+FLS:
+  enable: true
+  text: '友情链接:' #定义提示文本,若有冒号请使用半角单引号包含。
+  apply:
+    enable: true #是否显示申请友链链接
+    text: 申请友链? #留空默认显示 申请友链
+    url: './../posts/99999.html' #友链申请地址，支持相对链接和外部链接。外部链接请包含协议头。
+  links:
+    北枫: https://beifeng.me/
+    XLJ的博客: https://xlj0.com
+    YiSo搜索: https://s.xlj0.com/index.php
+    友用资源: https://www.yyzyxz.cn/
+    小白151 の B站: https://space.bilibili.com/353124728
+
+live2d:
+  enable: true

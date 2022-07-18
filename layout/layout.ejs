@@ -153,7 +153,12 @@
     <% if (theme.instantpage.enable) { %>
     <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.instantpage) %>" type="module"></script>
     <% } %>
-
+    <script>
+    $(document).ready(function(){
+        $('#waline-mail').attr('placeholder',"<%- theme.waline.mailT %>");
+        $('#waline-link').attr('placeholder',"<%- theme.waline.URLT %>");
+        $('#waline-edit').attr('placeholder',"<%- theme.waline.commT %>");
+    })
+    </script>
 </body>
-
 </html>
