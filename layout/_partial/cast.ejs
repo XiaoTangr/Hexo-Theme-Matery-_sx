@@ -1,0 +1,31 @@
+<%- css('css/cast') %>
+<!-- 引入css，你也可以将其放在head.ejs中，建议放在此处，放在head.ejs中时，当theme.csat.enable为false时，nav会有2em的空白 -->
+<div class="cast" id="cast">
+    <% if( theme.cast.icon.enable ) { %>
+        <% if (theme.cast.icon.class) { %>
+            <i id="casticon" class="<%- theme.cast.icon.class %>"></i>
+        <% } else { %>
+            <i id="casticon" class="fa-solid fa-bell"></i>
+        <% } %>
+    <% } %>
+    <!-- 4-10 行判断是否使用自定义的fa图标，如果配置文件中留空则使用默认图标 -->
+    <% if (theme.cast.date) { %>
+        <p class="castdate"><%- theme.cast.date %></p>
+    <% } %>
+    <!-- 上面三行判断是否显示公告时间 -->
+    <marquee class="casttext"><p class="casttextin" title="点击查看更多"><%- theme.cast.text %></p></marquee>
+    <!-- 下面的代码判断配置文件中是否填写url，若填写，则插入点击跳转的事件 -->
+    <% if(theme.cast && theme.cast.url){ %>
+        <script>
+            $(".casttextin").click(function(){
+                window.open('<%- theme.cast.url %>',"_self");
+            })
+        </script>
+    <% } %>
+</div>
+<!-- 下面的代码判断是否设置自定义图标颜色 -->
+<% if( theme.cast.icon.color ){ %>
+    <Style>#casticon{color: <%- theme.cast.icon.color %> ;}</Style>
+<% } else { %>
+    <Style>#casticon{color: white;}</Style>
+<% } %>

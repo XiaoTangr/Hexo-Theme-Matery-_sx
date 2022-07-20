@@ -1,0 +1,20 @@
+<div class="card mycard">
+  <div id="Discuss-Comments"></div>
+  <script>
+    // 初始化
+    Discuss.init({
+      el: '#Discuss-Comments',
+      serverURLs: '<%- theme.Discuss.serverURLs %>',
+      color: '<%- theme.Discuss.color %>',
+      <% if ( theme.Discuss.path === 'abbrlink'  ) { %>
+        path: '<%- page.abbrlink %>'
+      <% } %>,
+      ph:'<%- theme.Discuss.ph %>'
+  })
+  </script>
+    <style>
+      .mycard{
+        padding: 8px !important;
+      }
+    </style>
+</div>

@@ -1,0 +1,31 @@
+nav{
+    height: calc(64px + 2em);
+}
+
+.cast{
+    display: flex;
+    align-items: center;
+    height: 2em;
+    margin: 0;
+    padding: 0.5em;
+}
+#casticon{
+    display: inline-block;
+    height: 1em;
+}
+
+.casttext{
+    direction:left;
+}
+
+.castdate{
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.cast > *{
+    padding: 0 4px;
+}
+
+.casttextin{
+    cursor: pointer;
+}

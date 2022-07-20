@@ -1,0 +1,14 @@
+<div>
+    <div  class="FLS">
+    <span class="FLSS"><%- theme.FLS.text %></span>
+    <% for ( link in theme.FLS.links ) { %>
+            <a href="<%- theme.FLS.links[link] %>" class="FLS-links" target="_blank"><%- link %></a>
+            <span class="FLSS">|</span>
+        <% } %>
+    </div>
+    <div>
+        <% if (theme.FLS.apply.enable){ %>
+            <a href="<%- theme.FLS.apply.url %>"><%- theme.FLS.apply.text %></a>
+        <% } %>
+    </div>
+</div>
