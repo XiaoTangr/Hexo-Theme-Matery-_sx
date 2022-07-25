@@ -22,6 +22,9 @@ menu:
   Contact:
     url: /contact
     icon: fas fa-comments
+  links:
+    url: /posts/99998.html
+    icon: fa-solid fa-link
   Friends:
     icon: fa-solid fa-link
     children:
@@ -765,8 +768,8 @@ cast:
     enable: true #是否启用图标
     class: # fa图标class，留空为fa-solid fa-bell
     color: # 图标颜色，支持css颜色格式，留空为白色。
-  date: 2022年7月11日 # 留空不显示
-  text: 修改本站大部分图片资源由png转为webp，提高加载速度。
+  date: 2022年7月20日 # 留空不显示
+  text: 更新文章，优化内容。
   url: './../cast/'
 
 FLS:
@@ -782,6 +785,7 @@ FLS:
     YiSo搜索: https://s.xlj0.com/index.php
     友用资源: https://www.yyzyxz.cn/
     小白151 の B站: https://space.bilibili.com/353124728
+    槐雪: https://www.lvxuefei.top
 
 live2d:
   enable: true
