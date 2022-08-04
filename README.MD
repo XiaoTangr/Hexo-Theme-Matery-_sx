@@ -9,12 +9,25 @@
 在Hexo根目录使用如下命令:
 
 ``` bas
-git clone url themes/matery_sx
+git clone https://github.com/ShiXinBoy/Hexo-Theme-Matery-_sx.git themes/matery_sx
 ```
 
+### 
+修改站点配置文件中的theme为matery_sx
+## 修改内容
+1. 添加顶部通知功能，详细内容请看主题配置文件。
+2. 修改footer的结构和配置选项（完善了原作者遗留的部分未配置内容）
+3. 增加底部友链功能
+4. 优化waline评论系统（现在可以自定义def显示文本了）
+5. 优化畅言评论系统
+## 联系本人
+如果有兼容性问题或者其他疑问，欢迎联系本人。
 
+## 版权
+MIT开源，不得作商业用途。
+主题原作者：[blinkfox](https://github.com/blinkfox)
 
-以下内容来自原作者
+# <center>以下内容来自原作者</center>
 
 ## 特性
 

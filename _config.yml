@@ -768,8 +768,8 @@ cast:
     enable: true #是否启用图标
     class: # fa图标class，留空为fa-solid fa-bell
     color: # 图标颜色，支持css颜色格式，留空为白色。
-  date: 2022年7月20日 # 留空不显示
-  text: 更新文章，优化内容。
+  date: 2022年7月28日 # 留空不显示
+  text: 移除友链“北枫”，更新文章[32756]。
   url: './../cast/'
 
 FLS:
@@ -780,7 +780,6 @@ FLS:
     text: 申请友链? #留空默认显示 申请友链
     url: './../posts/99999.html' #友链申请地址，支持相对链接和外部链接。外部链接请包含协议头。
   links:
-    北枫: https://beifeng.me/
     XLJ的博客: https://xlj0.com
     YiSo搜索: https://s.xlj0.com/index.php
     友用资源: https://www.yyzyxz.cn/
